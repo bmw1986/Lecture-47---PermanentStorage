@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        NSUserDefaults.standardUserDefaults().setObject("Fred", forKey: "name") // stores the data
+        NSUserDefaults.standardUserDefaults().objectForKey("name")              // retreives the data
+        
+        println(NSUserDefaults.standardUserDefaults().objectForKey("name"))
     }
 
     override func didReceiveMemoryWarning() {
